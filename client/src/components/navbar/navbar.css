@@ -1,27 +1,74 @@
-.navbar{
-  height: 50px;
-  background-color: #003580;
+/* Estilo general del navbar */
+.navbar {
+  height: 60px; /* Un poco más alto para mejorar la estética */
+  background-color: #3d037b; /* Color morado oscuro */
   display: flex;
   justify-content: center;
+  padding: 0 10px; /* Asegura que no se toquen los bordes */
+  box-sizing: border-box;
 }
 
-.navContainer{
+/* Contenedor del navbar con límite de ancho */
+.navContainer {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1024px; /* Asegura que no se haga más grande que el límite */
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.logo{
-  font-weight: 500;
+/* Logo */
+.logo {
+  font-weight: 600;
+  font-size: 1.4rem; 
+  color: #febb02; 
+  letter-spacing: 1px; 
+  text-transform: uppercase; 
+  cursor: pointer;
 }
 
-.navButton{
+/* Estilo de los botones de navegación */
+.navButton {
   margin-left: 20px;
   border: none;
-  padding: 5px 10px;
+  padding: 8px 15px; /* Mayor padding para que los botones se vean más grandes */
   cursor: pointer;
-  color: #003580;
+  color: white;
+  background-color: transparent; /* Fondo transparente para que se vea el fondo morado */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1rem; /* Ajuste de tamaño de texto */
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s ease; /* Añade transiciones suaves */
+}
+
+/* Efecto hover en los botones */
+.navButton:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con opacidad al pasar el mouse */
+  transform: translateY(-2px); /* Pequeña animación al pasar el mouse */
+}
+
+/* Efecto activo en los botones */
+.navButton:active {
+  background-color: rgba(255, 255, 255, 0.4); /* Fondo ligeramente más claro al hacer clic */
+  transform: translateY(0); /* Elimina el efecto de movimiento al hacer clic */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column; /* Cambia la disposición a columna en pantallas pequeñas */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    gap: 10px; /* Añade un espacio entre los elementos */
+  }
+
+  .logo {
+    font-size: 1.2rem; /* Reduce el tamaño del logo en pantallas pequeñas */
+  }
+
+  .navButton {
+    margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+    padding: 10px 20px; /* Aumenta el tamaño del botón */
+  }
 }

@@ -6,13 +6,12 @@ import "./login.css";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
-    username: undefined,
-    password: undefined,
+    username: "",
+    password: "",
   });
 
   const { loading, error, dispatch } = useContext(AuthContext);
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -24,34 +23,41 @@ const Login = () => {
     try {
       const res = await axios.post("/auth/login", credentials);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
-      navigate("/")
+      navigate("/");
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
     }
   };
 
+  const handleRegister = () => {
+    navigate("/register");
+  };
 
   return (
     <div className="login">
       <div className="lContainer">
+        <h1 className="lTitle">Iniciar Sesion</h1>
         <input
           type="text"
-          placeholder="username"
+          placeholder="Usuario"
           id="username"
           onChange={handleChange}
           className="lInput"
         />
         <input
           type="password"
-          placeholder="password"
+          placeholder="contraseña"
           id="password"
           onChange={handleChange}
           className="lInput"
         />
         <button disabled={loading} onClick={handleClick} className="lButton">
-          Login
+          Iniciar Sesion
         </button>
-        {error && <span>{error.message}</span>}
+        <button onClick={handleRegister} className="lButton lRegisterButton">
+          Registro
+        </button>
+        {error && <span className="lError">{error.message}</span>}
       </div>
     </div>
   );

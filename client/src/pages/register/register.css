@@ -1,0 +1,139 @@
+/* Estilo global */
+.register {
+    height: 100vh; /* Hace que la altura sea igual a la altura de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: "Arial", sans-serif;
+    overflow: hidden; /* Previene el scroll */
+    margin: 0; /* Asegura que no haya márgenes por defecto */
+  }
+  
+  /* Contenedor del formulario */
+  .rContainer {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px; /* Se asegura de que el contenedor no sea más grande que esto */
+    text-align: center;
+    box-sizing: border-box;
+    max-height: 100vh; /* Asegura que no se desborde verticalmente */
+    overflow-y: auto; /* Permite desplazamiento interno si el contenido es muy largo */
+  }
+  
+  /* Título del formulario */
+  .rContainer h1 {
+    font-size: 2rem;
+    color: #3d037b;
+    margin-bottom: 24px;
+    font-weight: 600;
+    word-wrap: break-word; /* Asegura que el título no se desborde en pantallas pequeñas */
+  }
+  
+  /* Estilo de los campos de entrada */
+  .rInput {
+    width: 100%;
+    height: 45px;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  /* Efecto de foco en los campos de entrada */
+  .rInput:focus {
+    border-color: #3d037b;
+    outline: none;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.4);
+  }
+  
+  /* Estilo del botón de envío */
+  .rButton {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 12px;
+    background-color: #3d037b;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box;
+  }
+  
+  /* Efecto de hover sobre el botón */
+  .rButton:hover {
+    background-color: #1e5fcc;
+    transform: translateY(-2px);
+  }
+  
+  /* Efecto de presionar el botón */
+  .rButton:active {
+    background-color: #3d037b;
+    transform: translateY(0);
+  }
+  
+  /* Estilo para mensajes de error */
+  .rError {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 400;
+  }
+  
+  /* Estilo del botón "Volver al login" */
+  .rBackButton {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 16px;
+    background-color: #ccc;
+    color: #3d037b;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box;
+  }
+  
+  /* Efecto de hover sobre el botón "Volver al login" */
+  .rBackButton:hover {
+    background-color: #aaa;
+    transform: translateY(-2px);
+  }
+  
+  /* Efecto de presionar el botón "Volver al login" */
+  .rBackButton:active {
+    background-color: #888;
+    transform: translateY(0);
+  }
+  
+  /* Responsividad */
+  @media (max-width: 600px) {
+    .rContainer {
+      padding: 1.5rem; /* Menos espacio en pantallas pequeñas */
+      max-width: 90%; /* Aumenta el ancho máximo para pantallas más pequeñas */
+    }
+  
+    .rContainer h1 {
+      font-size: 1.6rem; /* Reduce el tamaño del título */
+    }
+  
+    .rInput, .rButton, .rBackButton {
+      font-size: 0.9rem; /* Reduce el tamaño de los campos de entrada y botones */
+    }
+  }
+  

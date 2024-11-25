@@ -14,14 +14,14 @@ dotenv.config();
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO);
-    console.log("Connected to mongoDB.");
+    console.log("Connectado a mongoDB.");
   } catch (error) {
     throw error;
   }
 };
 
 mongoose.connection.on("disconnected", () => {
-  console.log("mongoDB disconnected!");
+  console.log("mongoDB desconectado!");
 });
 
 //middlewares
@@ -47,5 +47,5 @@ app.use((err, req, res, next) => {
 
 app.listen(8800, () => {
   connect();
-  console.log("Connected to backend.");
+  console.log("Conectado al backend.");
 });
