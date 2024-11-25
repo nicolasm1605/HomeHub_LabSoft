@@ -7,9 +7,9 @@ const PropertyList = () => {
   const images = [
     "https://cf.bstatic.com/xdata/images/xphoto/square300/57584488.webp?k=bf724e4e9b9b75480bbe7fc675460a089ba6414fe4693b83ea3fdd8e938832a6&o=",
     "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-apartments_300/9f60235dc09a3ac3f0a93adbc901c61ecd1ce72e.jpg",
-    "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_resorts/6f87c6143fbd51a0bb5d15ca3b9cf84211ab0884.jpg",
-    "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-villas_300/dd0d7f8202676306a661aa4f0cf1ffab31286211.jpg",
-    "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/card-image-chalet_300/8ee014fcc493cb3334e25893a1dee8c6d36ed0ba.jpg",
+    "https://th.bing.com/th/id/OIP.AEyITsC-32lNFN-G2mhqNAHaEK?rs=1&pid=ImgDetMain",
+    "https://th.bing.com/th/id/R.6f328a7536ec38bcceefc783c9587b9e?rik=U1zpvIxll%2b7i9Q&pid=ImgRaw&r=0",
+    "https://th.bing.com/th/id/R.da0ac603ccbe822a1bb5a801812e5327?rik=pLqIOnRQO92oLw&riu=http%3a%2f%2fwww.crpcali.com%2fwp-content%2fuploads%2f2016%2f03%2f0Z6A1398.jpg&ehk=gU3Jf5HUtPWSq2Scm7A01qVbhwHQbvH4SXcl7MztJIc%3d&risl=&pid=ImgRaw&r=0",
   ];
   return (
     <div className="pList">
